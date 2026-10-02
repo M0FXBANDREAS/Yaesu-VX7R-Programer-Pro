@@ -1,0 +1,71 @@
+WRITE HANDSHAKE UPDATE
+Close the previous application, extract into a NEW folder, run START.vbs.
+
+Before Write Radio: radio OFF, cable firmly seated. Hold MON/F while powering
+ON for CLONE. Press V/M so the display says CLONE WAIT. Then click Yes in
+the application write prompt. BAND is used for reading, not for writing.
+
+The first two header blocks now compare cable echo with the exact bytes sent,
+accepting ACK-only, echo-before-ACK and ACK-before-echo. A short receive quiet
+period prevents a late echo being mistaken for the next block's reply. No
+arbitrary 0x06 inside an echoed header is accepted as acknowledgement. The
+header wait is five seconds. Missing ACK and unexpected bytes remain errors;
+the app does not ignore them or send the bulk image regardless.
+
+VX7R-error.log now records COM port and exact header TX/RX bytes. If writing
+fails again, attach that log from beside START.vbs. The error dialog points
+to it. Initial header failure occurs before the full image is sent.
+
+Syntax and archive checks passed. The new handshake has not been exercised
+on Windows against a radio. Other behaviour is described below.
+
+VX-7R RESIZABLE DASHBOARD
+
+Extract into a NEW folder, close the old version, and double-click START.vbs.
+
+WINDOW
+Drag any edge or corner to resize. Drag the native Windows title bar to move.
+Maximize, restore and minimize use the normal Windows buttons. All dashboard
+artwork and overlaid controls scale/align together, with letterboxing to keep
+proportions. The painted title bar is clipped from view, so it does not
+repeat the real window controls. Fonts are kept alive and are not disposed
+in resize events. Initial size fits the screen. Minimum window 1000x700.
+
+TOP MENUS / TABS
+VFO > View saved main/sub display: shows frequencies, names and any verified
+memory references from the loaded image. Read Radio button refreshes by clone.
+Scan > Edit memory skip/prefer flags: Normal/Skip/Prefer for regular memories.
+Apply changes the working image; Write Radio applies it to the radio.
+Settings > KEY BEEP: checked ON, unchecked OFF. Apply changes the image only.
+The VFO, Scan and Set Mode toolbar tabs open those same tools.
+VFO does not provide live tuning; Scan does not start a live radio scan.
+Other radio Set Mode settings still need verified mappings.
+
+READ
+Radio off, cable attached, hold MON/F at power-on for CLONE. Select COM, click
+Read Radio, then press BAND. Complete image length and all checksums are
+verified. The original is saved in Backups. Saved snapshots do not follow
+later knob changes until another read. Signal/battery/transmit telemetry
+is unavailable through clone mode.
+
+EDIT / WRITE
+Select a row and use the side editor + Apply Edit, or double-click a table
+cell / press F2. Enter commits; Esc cancels. Channel numbers are read-only.
+New/Delete, banks MG1–MG9, search, dashboard CSV import/export, image save/open,
+mode/power, tones/DCS/step and skip flags are supported for regular memories.
+Settings and scan edits are local until Write Radio. Write backs up the
+original and prompts for CLONE WAIT (MON/F+power, then V/M). Keep cable/power
+connected. Read back afterwards; Write verified requires exact image match.
+Do not upload images from a different radio. Original backup remains important.
+
+LIMITS / VALIDATION
+450 regular memories decoded. Special settings/memories remain preserved but
+unmapped. CSV uses this app's format, not CHIRP CSV. Stored BCD frequencies
+have 1kHz precision; fractional-step rounding is not added. Green displays
+show saved main/sub records and verified memory names, not live radio data.
+KEY BEEP is mapped from the confirmed ON->OFF images. Other settings are not
+claimed to be decoded. Radio reading/writing code is unchanged here.
+PowerShell syntax and ZIP integrity passed. New layout/menus have not been
+executed on Windows in the creation environment. VX7R-error.log records errors.
+Windows PowerShell 5.1 and built-in .NET used; no SDK/build required.
+GPL-3.0-or-later: see COPYING.txt and included source references.

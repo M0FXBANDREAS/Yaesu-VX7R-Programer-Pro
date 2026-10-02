@@ -1,0 +1,23 @@
+﻿2026-10-02T11:36:49.7401578+01:00 Application opened.
+2026-10-02T11:36:49.7521593+01:00 Ports: COM11
+2026-10-02T11:36:57.9171272+01:00 Read started on COM11 at 19200 baud
+2026-10-02T11:37:04.6806169+01:00 System.Management.Automation.RuntimeException: Transfer timed out at 1 / 16211 bytes. Image not accepted.
+2026-10-02T11:37:26.0642344+01:00 Read started on COM11 at 19200 baud
+2026-10-02T11:37:44.3191102+01:00 System.Management.Automation.RuntimeException: Transfer timed out at 1 / 16211 bytes. Image not accepted.
+2026-10-02T11:37:51.7784791+01:00 Read started on COM11 at 19200 baud
+2026-10-02T11:38:14.7115505+01:00 Original backed up: C:\Users\andre\OneDrive\Desktop\VX11\VX7R-WriteHandshake\Backups\VX7R-original-20261002-113814-704.img
+2026-10-02T11:38:14.8792459+01:00 Read succeeded: 1 memories; all checksums passed
+2026-10-02T11:38:39.0653612+01:00 Original backed up: C:\Users\andre\OneDrive\Desktop\VX11\VX7R-WriteHandshake\Backups\VX7R-original-20261002-113839-064.img
+2026-10-02T11:38:40.6028403+01:00 Upload started on COM11; header 1 TX: 0A-01-02-06-09-24-E3-03-02-24
+2026-10-02T11:38:45.6202565+01:00 Header 1 timed out; state EchoOnly; RX 0A-01-02-06-09-24-E3-03-02-24
+2026-10-02T11:38:45.6223312+01:00 System.Management.Automation.RuntimeException: The cable echoed the header, but the radio did not ACK. Re-enter CLONE WAIT by pressing V/M before Write Radio.
+2026-10-02T11:39:01.6583997+01:00 Original backed up: C:\Users\andre\OneDrive\Desktop\VX11\VX7R-WriteHandshake\Backups\VX7R-original-20261002-113901-657.img
+2026-10-02T11:39:05.7114843+01:00 Upload started on COM11; header 1 TX: 0A-01-02-06-09-24-E3-03-02-24
+2026-10-02T11:39:10.7226294+01:00 Header 1 timed out; state EchoOnly; RX 0A-01-02-06-09-24-E3-03-02-24
+2026-10-02T11:39:10.7251706+01:00 System.Management.Automation.RuntimeException: The cable echoed the header, but the radio did not ACK. Re-enter CLONE WAIT by pressing V/M before Write Radio.
+2026-10-02T11:39:45.0574655+01:00 Original backed up: C:\Users\andre\OneDrive\Desktop\VX11\VX7R-WriteHandshake\Backups\VX7R-original-20261002-113945-056.img
+2026-10-02T11:39:46.2656974+01:00 Upload started on COM11; header 1 TX: 0A-01-02-06-09-24-E3-03-02-24
+2026-10-02T11:39:46.4093169+01:00 Header 1 RX (EchoAndAck): 0A-01-02-06-09-24-E3-03-02-24-06
+2026-10-02T11:39:46.4123338+01:00 Header 2 TX: E3-03-02-01-FF-FF-FF-FF
+2026-10-02T11:39:46.5646279+01:00 Header 2 RX (EchoAndAck): E3-03-02-01-FF-FF-FF-FF-06
+2026-10-02T11:41:03.5676691+01:00 Image sent; radio read-back verification pending.

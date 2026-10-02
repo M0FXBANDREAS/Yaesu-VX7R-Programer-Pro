@@ -1,0 +1,6 @@
+Read-Radio.ps1: GPL-3.0-or-later. Distributed with source.
+Protocol and memory-map implementation informed by CHIRP:
+Copyright 2010 Dan Smith <dsmith@danplanet.com>.
+The included original reference sources retain their copyright notices.
+The program is provided without warranty; see COPYING.txt.
+Dashboard JPG: user-provided artwork; no claim of ownership is made.
